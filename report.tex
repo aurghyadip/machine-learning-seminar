@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[pdftex]{graphicx} %for embedding images
+\usepackage[left=1in,right=1.5in,top=1in,bottom=1in,footskip=.25in]{geometry}
+\usepackage{url} %for proper url entries
+\usepackage{wrapfig}
+\usepackage{sidecap}
+\usepackage{framed}
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+
+\begin{document}
+\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+
+%include other pages
+\input{title}
+\input{abstract}
+
+\pagenumbering{roman} %numbering before main content starts
+\tableofcontents
+\listoffigures
+
+\newpage
+\pagenumbering{arabic} %reset numbering to normal for the main content
+
+\input{history} %objective changed to problem definition
+\input{introduction} %literature survey included in this
+\input{applications}
+\input{future-work}
+\input{conclusion}
+\input{acknow}
+\input{ref}
+
+\end{document}
